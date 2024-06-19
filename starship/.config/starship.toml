@@ -1,0 +1,52 @@
+format = """
+[](#9A348E)\
+[  ](bg:#9A348E)\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$gcloud\
+[](fg:#86BBD8 bg:#33658A)\
+$time\
+[ ](fg:#33658A)\
+\n$character"""
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] 
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#FCA17D fg:#000000"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#FCA17D fg:#000000"
+format = '[($all_status$ahead_behind )]($style)'
+
+[gcloud]
+disabled = false
+style = "bg:#86BBD8 fg:#000000"
+format = '[$symbol$account(@$domain) (\[$project\])]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[[  $time ](fg:#a0a9cb bg:#33658A)]($style)'
