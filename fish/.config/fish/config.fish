@@ -3,4 +3,8 @@ if status is-interactive
     starship init fish | source
 end
 
+# maps $code path
 set -gx code /Users/jpries/code
+
+# brew sbin path
+fish_add_path --path --append /opt/homebrew/sbin
