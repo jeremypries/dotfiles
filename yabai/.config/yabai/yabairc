@@ -14,12 +14,9 @@ yabai -m config external_bar               all:47:0       \
                 window_opacity_duration    0.2            \
                 active_window_opacity      1.0            \
                 normal_window_opacity      0.8            \
-                window_animation_duration  0.5            \
-                window_animation_easing    ease_out_quint \
                 insert_feedback_color      0xff9dd274     \
                 split_ratio                0.50           \
                 auto_balance               off            \
-                auto_padding               on             \
                 mouse_modifier             cmd            \
                 mouse_action1              move           \
                 mouse_action2              resize         \
@@ -41,9 +38,10 @@ yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 
 # We want special behavior if we have one window on a display
-yabai -m signal --add event=window_created action="~/.config/yabai/single_window.sh"
-yabai -m signal --add event=window_destroyed action="~/.config/yabai/single_window.sh"
-yabai -m signal --add event=application_launched action="~/.config/yabai/single_window.sh"
-yabai -m signal --add event=application_terminated action="~/.config/yabai/single_window.sh"
+#yabai -m signal --add event=window_created action="~/.config/yabai/single_window.sh"
+#yabai -m signal --add event=window_moved action="~/.config/yabai/single_window.sh"
+#yabai -m signal --add event=window_destroyed action="~/.config/yabai/single_window.sh"
+#yabai -m signal --add event=application_launched action="~/.config/yabai/single_window.sh"
+#yabai -m signal --add event=application_terminated action="~/.config/yabai/single_window.sh"
 
 echo "yabai configuration loaded.."
