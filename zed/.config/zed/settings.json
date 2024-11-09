@@ -7,8 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "features": {
-    "copilot": false
+    "copilot": false,
+    "inline_completion_provider": "supermaven"
   },
   "theme": "Indigo",
   "vim_mode": true,
