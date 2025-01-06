@@ -7,13 +7,13 @@ local act = wezterm.action
 
 -- the plugin is currently made for Catppuccin only
 c.color_scheme = "Catppuccin Mocha"
---c.color_scheme = "Cyberdyne"
---c.color_scheme = "Atelierseaside (dark) (terminal.sexy)"
 
--- c.font = wezterm.font("Hack Nerd Font Mono")
---c.font = wezterm.font("Atkinson Hyperlegible")
-c.font = wezterm.font("Fira Code")
-c.font_size = 16
+-- c.font = wezterm.font("Fira Code")
+-- c.font = wezterm.font("JetBrainsMono Nerd Font")
+-- c.font = wezterm.font("RobotoMono Nerd Font Mono")
+c.font = wezterm.font("Maple Mono")
+c.font_size = 17
+c.line_height = 1.2
 c.enable_scroll_bar = true
 c.window_decorations = "RESIZE"
 
@@ -70,14 +70,14 @@ wezterm.plugin.require("https://github.com/nekowinston/wezterm-bar").apply_to_co
 		},
 	},
 	tabs = {
-		numerals = "arabic",      -- or "roman"
+		numerals = "arabic", -- or "roman"
 		pane_count = "superscript", -- or "subscript", false
 		brackets = {
 			active = { "", ":" },
 			inactive = { "", ":" },
 		},
 	},
-	clock = {         -- note that this overrides the whole set_right_status
+	clock = { -- note that this overrides the whole set_right_status
 		enabled = true,
 		format = "%H:%M", -- use https://wezfurlong.org/wezterm/config/lua/wezterm.time/Time/format.html
 	},
