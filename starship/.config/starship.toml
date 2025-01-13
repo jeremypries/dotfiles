@@ -1,16 +1,14 @@
 format = """
-[](#9A348E)\
-[  ](bg:#9A348E)\
-[](bg:#DA627D fg:#9A348E)\
+[](#DA627D)\
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
 [](fg:#FCA17D bg:#86BBD8)\
 $gcloud\
-[](fg:#86BBD8 bg:#33658A)\
-$time\
-[ ](fg:#33658A)\
+[](fg:#86BBD8 bg:#8690DC)\
+$kubernetes\
+[ ](fg:#8690DC)\
 \n$character"""
 
 # Replace the '❯' symbol in the prompt with '➜'
@@ -42,11 +40,13 @@ format = '[($all_status$ahead_behind )]($style)'
 
 [gcloud]
 disabled = false
+symbol = " 󱇶 "
 style = "bg:#86BBD8 fg:#000000"
 format = '[$symbol$account(@$domain) (\[$project\])]($style)'
 
-[time]
+[kubernetes]
+symbol = " 󱃾  "
+format = '[$symbol$context( \[($namespace\]))]($style)'
+style = "bg:#8690DC fg:#000000"
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
-format = '[[  $time ](fg:#a0a9cb bg:#33658A)]($style)'
+
