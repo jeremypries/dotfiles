@@ -11,11 +11,9 @@ $kubernetes\
 [ ](fg:#8690DC)\
 \n$character"""
 
-# Replace the '❯' symbol in the prompt with '➜'
 [character] 
 success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
-
+error_symbol = '[✗](bold red)'
 
 [directory]
 style = "bg:#DA627D"
