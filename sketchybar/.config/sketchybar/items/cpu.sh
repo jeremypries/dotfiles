@@ -13,4 +13,4 @@ cpu=(
 
 
 sketchybar --add item cpu right \
-           --set cpu  "${cpu[@]}"
+           --set cpu "${cpu[@]}"

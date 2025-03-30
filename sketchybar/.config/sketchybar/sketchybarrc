@@ -72,7 +72,7 @@ sketchybar --default "${defaults[@]}"
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
-
+source "$ITEM_DIR/music.sh"
 
 ##### Adding Right Items #####
 source "$ITEM_DIR/clock.sh"
