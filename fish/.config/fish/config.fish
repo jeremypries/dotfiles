@@ -4,7 +4,7 @@ if status is-interactive
 end
 
 # maps $code path
-set -gx code /Users/jpries/code
+set -gx code ~/code
 
 # brew sbin path
 fish_add_path --path --append /opt/homebrew/sbin
