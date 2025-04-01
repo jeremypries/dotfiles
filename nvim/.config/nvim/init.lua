@@ -15,8 +15,5 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
--- Needed for obsidian.nvim
-vim.opt.conceallevel = 2
-
 require "lazy_setup"
 require "polish"

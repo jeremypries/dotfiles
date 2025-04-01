@@ -1,0 +1,3 @@
+[style]
+column_width = 120  # Allow longer lines before wrapping
+collapse_simple_statement = true  # Keep one-liners intact

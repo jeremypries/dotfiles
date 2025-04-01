@@ -1,12 +1,17 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- Plugin that fades the non-active panes
+--
 return {
   "tadaa/vimade",
+  enabled = "false",
   opts = {
     -- Recipe can be any of 'default', 'minimalist', 'duo', and 'ripple'
     -- Set animate = true to enable animations on any recipe.
     -- See the docs for other config options.
     recipe = { "default", { animate = false } },
-    ncmode = "buffers", -- use 'windows' to fade inactive windows
-    fadelevel = 0.4, -- any value between 0 and 1. 0 is hidden and 1 is opaque.
+    ncmode = "buffers",     -- use 'windows' to fade inactive windows
+    fadelevel = 0.4,        -- any value between 0 and 1. 0 is hidden and 1 is opaque.
     tint = {
       -- bg = {rgb={0,0,0}, intensity=0.3}, -- adds 30% black to background
       -- fg = {rgb={0,0,255}, intensity=0.3}, -- adds 30% blue to foreground
@@ -49,8 +54,8 @@ return {
     -- Link connects windows so that they style or unstyle together.
     -- Properties are matched against the active window. Same format as blocklist above
     link = {},
-    groupdiff = true, -- links diffs so that they style together
-    groupscrollbind = false, -- link scrollbound windows so that they style together.
+    groupdiff = true,            -- links diffs so that they style together
+    groupscrollbind = false,     -- link scrollbound windows so that they style together.
 
     -- enable to bind to FocusGained and FocusLost events. This allows fading inactive
     -- tmux panes.
