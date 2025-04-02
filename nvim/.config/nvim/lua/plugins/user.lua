@@ -25,8 +25,8 @@ return {
 
           {
             footer = [[]],
-            padding = 2,                  -- Optional padding above/below the footer
-            align = "center",             -- Optional alignment (left, center, right)
+            padding = 2,      -- Optional padding above/below the footer
+            align = "center", -- Optional alignment (left, center, right)
             hl = "comment",
           },
 
