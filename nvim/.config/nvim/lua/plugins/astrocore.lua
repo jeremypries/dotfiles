@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -69,6 +69,14 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+
+        ["<Leader>Zn"] = {
+          function()
+            Snacks.picker.notifications()
+          end,
+          desc = "Show nvim notification console"
+        },
+        ["<leader>Z"] = { name = "System" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
