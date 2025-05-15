@@ -8,3 +8,6 @@ set -gx code ~/code
 
 # brew sbin path
 fish_add_path --path --append /opt/homebrew/sbin
+
+# Initialize zoxide
+zoxide init fish | source
