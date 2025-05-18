@@ -1,0 +1,9 @@
+---
+name: dotfiles
+project_root: "/Users/jpries/dotfiles/tmuxinator/.config/tmuxinator"
+windows:
+  - Window:
+      layout: 3795,251x47,0,0{125x47,0,0,27,125x47,126,0,29}
+      panes:
+        - cd /Users/jpries/dotfiles/tmuxinator/.config/tmuxinator
+        - cd /Users/jpries/dotfiles

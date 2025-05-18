@@ -1,0 +1,10 @@
+---
+name: Home
+project_root: "/Users/jpries"
+windows:
+- main:
+    layout: 689d,251x47,0,0{160x47,0,0,24,90x47,161,0[90x25,161,0,25,90x21,161,26,26]}
+    panes:
+    - cd /Users/jpries
+    - cd /Users/jpries/dotfiles
+    - cd /Users/jpries/dotfiles
