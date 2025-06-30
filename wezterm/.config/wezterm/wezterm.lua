@@ -8,79 +8,45 @@ local act = wezterm.action
 -- the plugin is currently made for Catppuccin only
 c.color_scheme = "Catppuccin Macchiato"
 
--- c.font = wezterm.font("Fira Code")
--- c.font = wezterm.font("JetBrainsMono Nerd Font")
--- c.font = wezterm.font("RobotoMono Nerd Font Mono")
 c.font = wezterm.font("Maple Mono")
 c.font_size = 17
 c.line_height = 1.2
 c.enable_scroll_bar = true
 c.window_decorations = "RESIZE"
 
-c.leader = { key = "k", mods = "CTRL", timeout_milliseconds = 2000 }
-c.keys = {
-  -- Key bindings for split panes
-  {
-    key = "h",
-    mods = "LEADER",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-  },
-  {
-    key = "v",
-    mods = "LEADER",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-  },
-
-  -- Key bindings for navigation
-  {
-    key = "n",
-    mods = "LEADER",
-    action = wezterm.action.PaneSelect({ alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" }),
-  },
-  {
-    key = "r",
-    mods = "LEADER",
-    action = act.RotatePanes("Clockwise"),
-  },
-  { key = "a", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
-  { key = "d", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-  { key = "s", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
-  { key = "w", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
-}
-
 -- then finally apply the plugin
 -- these are currently the defaults:
 wezterm.plugin.require("https://github.com/nekowinston/wezterm-bar").apply_to_config(c, {
-  position = "bottom",
-  max_width = 32,
-  dividers = "slant_right",   -- or "slant_left", "arrows", "rounded", false
-  indicator = {
-    leader = {
-      enabled = true,
-      off = " ",
-      on = " ",
+    position = "bottom",
+    max_width = 32,
+    dividers = "slant_right", -- or "slant_left", "arrows", "rounded", false
+    indicator = {
+        leader = {
+            enabled = true,
+            off = " ",
+            on = " ",
+        },
+        mode = {
+            enabled = true,
+            names = {
+                resize_mode = "RESIZE",
+                copy_mode = "VISUAL",
+                search_mode = "SEARCH",
+            },
+        },
     },
-    mode = {
-      enabled = true,
-      names = {
-        resize_mode = "RESIZE",
-        copy_mode = "VISUAL",
-        search_mode = "SEARCH",
-      },
+    tabs = {
+        numerals = "arabic", -- or "roman"
+        pane_count = "superscript", -- or "subscript", false
+        brackets = {
+            active = { "", ":" },
+            inactive = { "", ":" },
+        },
     },
-  },
-  tabs = {
-    numerals = "arabic",            -- or "roman"
-    pane_count = "superscript",     -- or "subscript", false
-    brackets = {
-      active = { "", ":" },
-      inactive = { "", ":" },
+    clock = { -- note that this overrides the whole set_right_status
+        enabled = true,
+        format = "%H:%M", -- use https://wezfurlong.org/wezterm/config/lua/wezterm.time/Time/format.html
     },
-  },
-  clock = {               -- note that this overrides the whole set_right_status
-    enabled = true,
-    format = "%H:%M",     -- use https://wezfurlong.org/wezterm/config/lua/wezterm.time/Time/format.html
-  },
 })
 
 return c
