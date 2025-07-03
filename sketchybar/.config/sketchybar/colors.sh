@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Color Palette
 export BLACK=0xff181926
 export WHITE=0xffcad3f5
@@ -17,7 +15,7 @@ export CYAN=0xff7dcfff
 
 # General bar colors
 export BAR_COLOR=0xa024273a
-export ICON_COLOR=$WHITE # Color of all icons
+export ICON_COLOR=$WHITE  # Color of all icons
 export LABEL_COLOR=$WHITE # Color of all labels
 export BACKGROUND_1=0x903c3e4f
 export BACKGROUND_2=0x90494d64
@@ -26,4 +24,3 @@ export POPUP_BACKGROUND_COLOR=0xff24273a
 export POPUP_BORDER_COLOR=$WHITE
 
 export SHADOW_COLOR=$BLACK
-
