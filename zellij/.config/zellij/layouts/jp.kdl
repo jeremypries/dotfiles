@@ -1,0 +1,56 @@
+layout {
+    pane split_direction="vertical" {
+        pane
+    }
+
+    pane size=2 borderless=true {
+        plugin location="zjstatus" {
+            format_left  "#[fg=#FFFFFF,bold]  {session} {mode} {tabs}"
+            // format_right "#[bg=#8A8A8A,fg=#000000] #[bg=#8A8A8A,fg=#000000,bold]{swap_layout} #[bg=#000000,fg=#8A8A8A]"
+            format_right  "{command_gcp_act}{command_gcp_prj} {command_k8s_cxt}{command_k8s_ns}"
+
+            mode_locked "#[fg=#FF00D9,bold] {name} "
+            mode_normal "#[fg=#8bd5ca,bold] {name} "
+            mode_resize "#[fg=#D75F00,bold] {name} "
+            mode_tab    "#[fg=#FF00D9,bold] {name} "
+            mode_tmux   "#[fg=#FF00D9,bg=#b7bdf8,bold] {name} "
+            mode_default_to_mode "resize"
+
+            tab_normal "#[bg=#8A8A8A,fg=#000000] #[bg=#8A8A8A,fg=#000000,bold]{name} {sync_indicator}{fullscreen_indicator}{floating_indicator} #[bg=#000000,fg=#8A8A8A]"
+            tab_active "#[bg=#eed49f,fg=#000000] #[bg=#eed49f,fg=#000000,bold]{name} {sync_indicator}{fullscreen_indicator}{floating_indicator} #[bg=#000000,fg=#eed49f]"
+
+            tab_sync_indicator       " "
+            tab_fullscreen_indicator "□ "
+            tab_floating_indicator   "󰉈 "
+
+            datetime        "#[fg=#F0C6C6] {format} "
+            datetime_format "%H:%M"
+            datetime_timezone "America/Chicago"
+
+            command_gcp_act_command     "gcloud config list --format='value[](core.account)'"
+            command_gcp_act_format      "#[fg=blue] 󱇶 {stdout}"
+            command_gcp_act_interval    "10"
+            command_gcp_act_rendermode  "static"
+
+            command_gcp_prj_command     "gcloud config list --format='value[](core.project)'"
+            command_gcp_prj_format      "#[fg=blue][{stdout}]"
+            command_gcp_prj_interval    "10"
+            command_gcp_prj_rendermode  "static"
+
+            command_k8s_cxt_command     "kubectx -c"
+            command_k8s_cxt_format      "#[fg=#F0C6C6] 󱃾 {stdout}"
+            command_k8s_cxt_interval    "10"
+            command_k8s_cxt_rendermode  "static"
+
+            command_k8s_ns_command      "kubens -c"
+            command_k8s_ns_format       "#[fg=#F0C6C6][{stdout}]"
+            command_k8s_ns_interval     "10"
+            command_k8s_ns_rendermode   "static"
+
+            border_enabled  "true"           // "true" | "false" for activating the bar
+            border_char     "─"              // character used for drawing the bar
+            border_format   "#[fg=#6C7086]"  // format specifier for theming
+            border_position "top"            // "top" | "bottom" for the border position relative to the bar
+        }
+    }
+}

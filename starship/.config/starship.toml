@@ -4,11 +4,7 @@ $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
-$gcloud\
-[](fg:#86BBD8 bg:#8690DC)\
-$kubernetes\
-[ ](fg:#8690DC)\
+[](fg:#FCA17D)\
 \n$character"""
 
 [character]

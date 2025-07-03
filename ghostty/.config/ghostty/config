@@ -1,0 +1,15 @@
+gtk-titlebar = false
+macos-titlebar-style = hidden
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+theme = catppuccin-macchiato.conf
+adjust-cell-height =  10%
+shell-integration = fish
+confirm-close-surface = false
+font-family = Maple Mono
+font-size = 17.0
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+background-opacity = 0.9
