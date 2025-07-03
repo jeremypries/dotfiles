@@ -2,6 +2,12 @@
 
 vim.g.stylua_config_path = "~/.config/nvim/stylua.toml"
 
+-- Fat Cursor - goes with modes plugin
+vim.opt.guicursor        = {
+  "n-v:block-Cursor/lCursor",
+  -- "i-c-ci-ve:block-TermCursor",
+}
+
 ---@type LazySpec
 return {
   {

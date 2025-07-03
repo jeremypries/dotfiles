@@ -4,7 +4,7 @@ return {
 
   { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
-  { import = "astrocommunity.completion/cmp-cmdline" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
