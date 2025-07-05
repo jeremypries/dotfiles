@@ -6,6 +6,10 @@ ITEM_DIR="$CONFIG_DIR/items"
 
 FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 
+# Start stats_provider process that pushes stat events to sketchybar
+killall stats_provider
+~/dotfiles/sketchybar-system-stats/target/release/stats_provider --cpu usage --cpu temperature --interval 2 &
+
 bar=(
   height=30
   color=$TRANSPARENT
@@ -53,6 +57,7 @@ source "$ITEM_DIR/flashspace.sh"
 source "$ITEM_DIR/clock.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/cpu_temp.sh"
 source $ITEM_DIR/cpu.sh
 source $ITEM_DIR/mem.sh
 

@@ -3,9 +3,9 @@
 mem=(
   script="$PLUGIN_DIR/mem.sh"
   update_freq=2
-  icon=􀫦
+  icon=
   icon.color="$ORANGE"
-  icon.font="$FONT:Regular:19.0"
+  icon.font="Hack Nerd Font:Regular:19.0"
   label=?
   padding_right=5
   padding_left=5
@@ -18,7 +18,6 @@ bracket=(
 )
 
 sketchybar --add item mem right \
-           --set mem "${mem[@]}"
+  --set mem "${mem[@]}"
 
-sketchybar --add bracket perf cpu mem volume brew battery\
-           --set perf "${bracket[@]}"
+sketchybar --add bracket perf cpu mem volume brew battery --set perf "${bracket[@]}"
