@@ -9,8 +9,8 @@ clock=(
     icon.color="$COLOR"
     icon=""
 
-    padding_right=5
-    padding_left=10
+    padding_right=10
+    padding_left=5
     align=center
     update_freq=1
 
@@ -23,7 +23,7 @@ clock=(
 
     label.color="$COLOR"
     label.padding_right=5
-    label.width=78
+    label.width=130
 )
 
 sketchybar --add item clock right \
