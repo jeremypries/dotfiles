@@ -8,9 +8,6 @@
 return {
 	"AstroNvim/astrocommunity",
 
-	{ import = "astrocommunity.bars-and-lines.dropbar-nvim" },
-	{ import = "astrocommunity.color.modes-nvim" },
-	{ import = "astrocommunity.colorscheme.onedarkpro-nvim" },
 	{ import = "astrocommunity.colorscheme.github-nvim-theme" },
 	{ import = "astrocommunity.completion.cmp-cmdline" },
 	{ import = "astrocommunity.git.blame-nvim" },
@@ -35,9 +32,5 @@ return {
 	{ import = "astrocommunity.pack.terraform" },
 	{ import = "astrocommunity.pack.yaml" },
 
-	-- { import = "astrocommunity.project.projectmgr-nvim" },
-	{ import = "astrocommunity.recipes.heirline-mode-text-statusline" },
 	{ import = "astrocommunity.recipes.vscode-icons" },
-	{ import = "astrocommunity.scrolling.satellite-nvim" },
-	{ import = "astrocommunity.scrolling.cinnamon-nvim" },
 }
