@@ -3,6 +3,7 @@ return {
   "AstroNvim/astrocommunity",
 
   { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
+  { import = "astrocommunity.color.modes-nvim" },
   { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
   { import = "astrocommunity.completion.cmp-cmdline" },
   { import = "astrocommunity.git.blame-nvim" },
@@ -16,6 +17,7 @@ return {
   { import = "astrocommunity.pack.fish" },
   { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.go" },
+  -- { import = "astrocommunity.pack.harper" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },

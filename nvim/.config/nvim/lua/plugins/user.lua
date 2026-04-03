@@ -20,54 +20,11 @@ return {
       dashboard = {
         enabled = true,
         sections = {
-          {
-            section = "terminal",
-            pane = 2,
-            cmd = "cbonsai -i -l -L 25 -M 4 -b 2",
-            align = "center",
-            -- padding = 5,
-            width = 40,
-          },
-
-          {
-            footer = [[]],
-            padding = 2,      -- Optional padding above/below the footer
-            align = "center", -- Optional alignment (left, center, right)
-            hl = "comment",
-          },
-
-          {
-            indent = 4,
-            {
-              icon = " ",
-              title = "Recent Projects",
-            },
-            {
-              section = "projects",
-              opts = {
-                limit = 8,
-              },
-              action = function(path)
-                vim.cmd("Neotree reveal left dir=" .. path)
-                vim.cmd("Neotree reveal left")
-              end,
-              indent = 6,
-              padding = 1,
-            },
-
-            {
-              icon = " ",
-              title = "Recent Files",
-            },
-            {
-              section = "recent_files",
-              opts = {
-                limit = 8,
-              },
-              indent = 6,
-              padding = 1,
-            },
-          },
+          -- { section = "header" },
+          -- { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+          { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+          -- { section = "startup" },
         },
       },
     },

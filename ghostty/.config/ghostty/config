@@ -1,5 +1,4 @@
 gtk-titlebar = false
-macos-titlebar-style = hidden
 window-padding-x = 12
 window-padding-y = 12
 window-padding-balance = true
@@ -7,9 +6,31 @@ theme = catppuccin-macchiato.conf
 adjust-cell-height =  10%
 shell-integration = fish
 confirm-close-surface = false
-font-family = Maple Mono
+
+font-family = JetBrainsMono Nerd Font Mono
 font-size = 17.0
+
 clipboard-read = allow
 clipboard-write = allow
 copy-on-select = true
-background-opacity = 0.9
+background-opacity = 1.00
+
+keybind = global:ctrl+period=toggle_quick_terminal
+
+# ─── Platform: macOS ──────────────────────────────────────────
+macos-non-native-fullscreen = false
+macos-window-buttons = visible
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = visible
+macos-dock-drop-behavior = new-tab
+macos-option-as-alt =
+macos-window-shadow = true
+macos-hidden = never
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+macos-icon = official
+macos-custom-icon =
+macos-icon-frame = aluminum
+macos-icon-ghost-color =
+macos-icon-screen-color =
+macos-shortcuts = ask
