@@ -4,7 +4,7 @@
 return {
   "mvllow/modes.nvim",
   config = function()
-    require('modes').setup({
+    require("modes").setup {
       colors = {
         bg = "", -- Optional bg param, defaults to Normal hl group
         copy = "#f5c359",
@@ -32,7 +32,7 @@ return {
       -- Disable modes highlights for specified filetypes
       -- or enable with prefix "!" if otherwise disabled (please PR common patterns)
       -- Can also be a function fun():boolean that disables modes highlights when true
-      ignore = { 'NvimTree', 'TelescopePrompt', '!minifiles' }
-    })
-  end
+      ignore = { "NvimTree", "TelescopePrompt", "!minifiles" },
+    }
+  end,
 }

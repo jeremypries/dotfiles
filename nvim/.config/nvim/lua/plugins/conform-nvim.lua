@@ -10,9 +10,7 @@ return {
     {
       -- Customize or remove this keymap to your liking
       "<leader>f",
-      function()
-        require("conform").format({ async = true })
-      end,
+      function() require("conform").format { async = true } end,
       mode = "",
       desc = "Format buffer",
     },

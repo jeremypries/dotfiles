@@ -4,7 +4,7 @@ return {
   "shellRaining/hlchunk.nvim",
   -- event = { "BufReadPre", "BufNewFile" },
   config = function()
-    require("hlchunk").setup({
+    require("hlchunk").setup {
       chunk = {
         enable = true,
         chars = {
@@ -23,7 +23,7 @@ return {
           "│",
         },
         style = {
-          vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("Whitespace")), "fg", "gui"),
+          vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID "Whitespace"), "fg", "gui"),
         },
       },
 
@@ -38,10 +38,10 @@ return {
           " ",
         },
         style = {
-          { bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("cursorline")), "bg", "gui") },
-          { bg = "",                                                                         fg = "" },
+          { bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID "cursorline"), "bg", "gui") },
+          { bg = "", fg = "" },
         },
       },
-    })
+    }
   end,
 }

@@ -1,3 +1,9 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+
+-- AstroCommunity: import any community modules here
+-- We import this file in `lazy_setup.lua` before the `plugins/` folder.
+-- This guarantees that the specs are processed before any user plugins.
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
@@ -15,9 +21,7 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.fish" },
-  { import = "astrocommunity.pack.full-dadbod" },
   { import = "astrocommunity.pack.go" },
-  -- { import = "astrocommunity.pack.harper" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
@@ -30,11 +34,9 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.yaml" },
 
-  { import = "astrocommunity.project.projectmgr-nvim" },
+  -- { import = "astrocommunity.project.projectmgr-nvim" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.recipes.vscode-icons" },
   { import = "astrocommunity.scrolling.satellite-nvim" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
-  -- { import = "astrocommunity.diagnostics/trouble-nvim" },
-  -- { import = "astrocommunity.diagnostics/error-lens-nvim" },
 }
